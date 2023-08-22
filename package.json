@@ -1,0 +1,35 @@
+{
+  "name": "portfolio-supabase",
+  "version": "1.0.0",
+  "repository": "https://github.com/webkowski/portfolio-supabase.git",
+  "author": "Piotr Łepkowski <ozrabal@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "dev:supabase": "supabase start & next dev",
+    "supabase:init": "supabase init",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop"
+  },
+  "dependencies": {
+    "@supabase/auth-helpers-nextjs": "latest",
+    "@supabase/supabase-js": "latest",
+    "autoprefixer": "10.4.14",
+    "next": "latest",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "encoding": "^0.1.13",
+    "supabase": "^1.86.2"
+  }
+}
