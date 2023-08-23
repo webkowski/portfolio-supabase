@@ -5,10 +5,17 @@
   "author": "Piotr Łepkowski <ozrabal@gmail.com>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=18.16.0",
+    "npm": "use yarn",
+    "yarn": ">=1.22.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "next lint",
+    "stylelint": "stylelint \"src/**/*.css\"",
     "dev:supabase": "supabase start & next dev",
     "supabase:init": "supabase init",
     "supabase:start": "supabase start",
@@ -20,6 +27,7 @@
     "autoprefixer": "10.4.14",
     "next": "latest",
     "postcss": "8.4.24",
+    "postcss-scss": "^4.0.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
@@ -29,7 +37,22 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
     "encoding": "^0.1.13",
+    "eslint": "^8.47.0",
+    "eslint-config-next": "^13.4.19",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "eslint-plugin-typescript-sort-keys": "^2.3.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "stylelint-scss": "^5.1.0",
     "supabase": "^1.86.2"
   }
 }

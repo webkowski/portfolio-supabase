@@ -21,12 +21,12 @@ The Vercel deployment will guide you through creating a Supabase account and pro
 
 ### Create a Supabase client
 
-Check out the [`/app/_examples`](./app/_examples/) folder for an example of creating a Supabase client in:
+Check out the [`/app/_examples`](src/app/_examples/) folder for an example of creating a Supabase client in:
 
-- [Client Components](./app/_examples/client-component/page.tsx)
-- [Server Components](./app/_examples/server-component/page.tsx)
-- [Route Handlers](./app/_examples/route-handler/route.ts)
-- [Server Actions](./app/_examples/server-action/page.tsx)
+- [Client Components](src/app/_examples/client-component/page.tsx)
+- [Server Components](src/app/_examples/server-component/page.tsx)
+- [Route Handlers](src/app/_examples/route-handler/route.ts)
+- [Server Actions](src/app/_examples/server-action/page.tsx)
 
 ### Create `todo` table and seed with data (optional)
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function SupabaseLogo() {
   return (
@@ -69,7 +69,10 @@ export default function SupabaseLogo() {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#249361" />
-          <stop offset="1" stopColor="#3ECF8E" />
+          <stop
+            offset="1"
+            stopColor="#3ECF8E"
+          />
         </linearGradient>
         <linearGradient
           id="paint1_linear_4671_51136"
@@ -80,7 +83,10 @@ export default function SupabaseLogo() {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="1" stopOpacity="0" />
+          <stop
+            offset="1"
+            stopOpacity="0"
+          />
         </linearGradient>
         <clipPath id="clip0_4671_51136">
           <rect
@@ -100,5 +106,5 @@ export default function SupabaseLogo() {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
