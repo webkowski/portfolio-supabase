@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 360, 100%, 100%;
+    --btn-background: 200 10% 91%;
+  }
+}
