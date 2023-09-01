@@ -45,7 +45,7 @@ export default async function authMiddleware(request: NextRequest) {
 
     const { data: user } = await SupabaseClient.from('user').select('*').eq('token', key).limit(1);
 
-    if (user) {
+    if (user && user.length > 0) {
       const tokenValid: boolean = validateToken(user[0].created_at, user[0].valid_period);
 
       if (tokenValid) {
@@ -71,7 +71,7 @@ export default async function authMiddleware(request: NextRequest) {
   if (key) {
     const { data: user } = await SupabaseClient.from('user').select('*').eq('token', key).limit(1);
 
-    if (user) {
+    if (user && user.length > 0) {
       return validateToken(user[0].created_at, user[0].valid_period) ? NextResponse.next() : redirectAccessDenied(request);
     }
   }
