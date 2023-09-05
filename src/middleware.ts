@@ -23,14 +23,17 @@ function redirectAccessGranted(request: NextRequest): NextResponse {
   return NextResponse.redirect(redirectUrl);
 }
 export const config = {
-  matcher: '/((?!_next/static|_next/image|icon.png).*)',
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|icon.png).*)'],
 };
-export default async function authMiddleware(request: NextRequest) {
+
+export async function middleware(request: NextRequest) {
   const url = request.nextUrl;
 
   const urlElements = url.pathname.split('/');
+  let key = undefined;
+  key = request.cookies.get(COOKIE_NAME);
 
-  const key = request.cookies.get(COOKIE_NAME)?.value;
+  if (request.cookies.get(COOKIE_NAME)?.value) key = request.cookies.get(COOKIE_NAME)?.value;
 
   if (urlElements[1] === 'login' && key) {
     return redirectAccessGranted(request);
