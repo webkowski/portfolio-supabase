@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build ",
+    "prebuild": "node prebuild.js",
     "start": "next start",
     "lint": "next lint",
     "stylelint": "stylelint \"src/**/*.css\"",
@@ -36,7 +37,7 @@
     "typescript": "5.1.3"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "appdir",
+    "@netlify/plugin-nextjs": "^4.37.4",
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
