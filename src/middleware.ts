@@ -6,7 +6,7 @@ import { calculateRemainingPeriod, validateToken } from '@/utils/user';
 const REDIRECT_URL_INVALID_TOKEN = '/login';
 const REDIRECT_URL_VALID_TOKEN = '/';
 const COOKIE_NAME = '_k';
-export const runtime = 'edge';
+export const runtime = 'experimental-edge';
 
 function redirectAccessDenied(request: NextRequest): NextResponse {
   const url = request.nextUrl;
