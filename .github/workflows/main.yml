@@ -18,6 +18,9 @@ jobs:
           aws-region: us-east-1
       - name: pnpm-setup
         uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
       - name: Deploy app
         run: |
           pnpm sst deploy
