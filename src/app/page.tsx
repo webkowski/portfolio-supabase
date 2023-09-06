@@ -4,7 +4,7 @@ import { cookies } from 'next/headers';
 import Link from 'next/link';
 import React from 'react';
 
-export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
 
 export default function Index(): React.ReactNode {
   const cookieStore: ReadonlyRequestCookies = cookies();
