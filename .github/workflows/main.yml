@@ -16,7 +16,7 @@ jobs:
         env:
             AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         with:
-          role-to-assume: arn:aws:iam::"$env:AWS_ACCOUNT_ID":role/GitHub
+          role-to-assume: arn:aws:iam::"$AWS_ACCOUNT_ID":role/GitHub
           aws-region: us-east-1
       - name: Deploy app
         run: |
