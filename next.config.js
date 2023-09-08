@@ -5,8 +5,22 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   trailingSlash: true,
   pageExtensions: ['ts', 'tsx'],
+  output: 'standalone',
   experimental: {
-    // serverActions: true,
+    serverActions: true,
+  },
+  headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'e2e-headers',
+            value: 'next.config.js',
+          },
+        ],
+      },
+    ];
   },
   eslint: {
     // ignoreDuringBuilds: true,
