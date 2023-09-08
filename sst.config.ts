@@ -11,9 +11,12 @@ export default {
   stacks(app) {
     app.stack(function Site({ stack }) {
       const bucket = new Bucket(stack, 'public');
+
       const site = new NextjsSite(stack, 'site', {
         bind: [bucket],
+        buildCommand: 'npm run openbuild',
       });
+
       stack.addOutputs({
         SiteUrl: site.url,
       });
