@@ -13,8 +13,8 @@ export default {
       const bucket = new Bucket(stack, 'public');
 
       const site = new NextjsSite(stack, 'site', {
+        buildCommand: 'npx open-next@2.1.1 build',
         bind: [bucket],
-        buildCommand: 'npm run openbuild',
       });
 
       stack.addOutputs({
