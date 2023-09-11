@@ -23,9 +23,9 @@ function redirectAccessGranted(request: NextRequest): NextResponse {
 
   return NextResponse.redirect(redirectUrl);
 }
-// export const config = {
-//   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|icon.png).*)'],
-// };
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|icon.png).*)'],
+};
 
 export async function middleware(request: NextRequest) {
   const url = request.nextUrl;
