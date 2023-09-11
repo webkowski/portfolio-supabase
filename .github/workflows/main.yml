@@ -19,4 +19,4 @@ jobs:
       - name: Deploy app
         run: |
           yarn install
-          yarn sst deploy --stage prod --verbose
+          yarn sst deploy --stage prod
