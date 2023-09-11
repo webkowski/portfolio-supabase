@@ -3,7 +3,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 const nextConfig = {
-  trailingSlash: true,
+  // trailingSlash: true,
   pageExtensions: ['ts', 'tsx'],
   output: 'standalone',
   experimental: {
